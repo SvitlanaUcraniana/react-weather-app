@@ -1,5 +1,35 @@
 .Weather {
     border: 1px solid #DADDE1;
-    max-width: 600px;
-    padding: 20px;
+    border-radius: 4px;
+    padding: 16px;
+    color: #878787;
+}
+
+.Weather h1 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    line-height: 29px;
+}
+
+.Weather ul {
+    list-style: none;
+   margin: 0;
+    padding: 0;
+    line-height: 19px;
+}
+
+.Weather img {
+    vertical-align: -50%;
+}
+
+.Weather .degrees {
+    color: #212121;
+    font-size: 64px;
+}
+
+.Weather .unit {
+    vertical-align: 140%;
+    color: #212121;
+    
 }
