@@ -9,7 +9,7 @@ export default function FormattedDate(props) {
         hours = `0${hours}`;
     }
     if (minutes <10) {
-        minutes = `0${hours}`;
+        minutes = `0${minutes}`;
     }
     return (`${day} ${hours}:${minutes}`)
 }
