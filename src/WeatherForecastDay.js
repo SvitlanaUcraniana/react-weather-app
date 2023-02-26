@@ -14,9 +14,9 @@ function minTemperature() {
 
 function day() {
 let date = new Date(props.data.time * 1000);
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let day = date.getDay();
-return days[day];
+let daysShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let dayShort = date.getDay();
+return daysShort[dayShort];
 }
 
     return (
