@@ -2,31 +2,35 @@ import React from "react";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecastDay(props) {
-function maxTemperature() {
+  function maxTemperature() {
     let temperature = Math.round(props.data.temperature.maximum);
-    return (temperature)
-}
+    return temperature;
+  }
 
-function minTemperature() {
+  function minTemperature() {
     let temperature = Math.round(props.data.temperature.minimum);
-    return (temperature)
-}
+    return temperature;
+  }
 
-function day() {
-let date = new Date(props.data.time * 1000);
-let daysShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let dayShort = date.getDay();
-return daysShort[dayShort];
-}
+  function day() {
+    let date = new Date(props.data.time * 1000);
+    let daysShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let dayShort = date.getDay();
+    return daysShort[dayShort];
+  }
 
-    return (
-        <div>
-             <div className="WeatherForecast-day">{day()}</div>
-            <WeatherIcon code={props.data.condition.icon} size={36} />
-            <div className="WeatherForecast-temperatures">
-              <span className="WeatherForecast-temperature-max">{maxTemperature()}°</span>
-              <span className="WeatherForecast-temperature-min">{minTemperature()}°</span>
-            </div>
-        </div>
-    )
+  return (
+    <div>
+      <div className="WeatherForecast-day">{day()}</div>
+      <WeatherIcon code={props.data.condition.icon} size={36} />
+      <div className="WeatherForecast-temperatures">
+        <span className="WeatherForecast-temperature-max">
+          {maxTemperature()}°
+        </span>
+        <span className="WeatherForecast-temperature-min">
+          {minTemperature()}°
+        </span>
+      </div>
+    </div>
+  );
 }
